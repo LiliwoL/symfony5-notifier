@@ -13,8 +13,6 @@ Le composant notificateur prend en charge les canaux suivants:
 * Le courrier électronique intègre Symfony Mailer
 * Le navigateur utilise des messages flash
 	
-	
-![bf45eb1075ebaadcdb6a15d2b63ee876.png](:/9a21afe5330744b284311d6d1e118a16)
 
 ## Installation
 
