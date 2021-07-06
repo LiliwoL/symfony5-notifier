@@ -30,7 +30,7 @@ composer require symfony/notifier
 Pour pouvoir envoyer des notifications par mail, il faudra configurer le *MAILER_DSN* dans le fichier *.env*:
 
 `
-MAILER_DSN=smtp://a01278339e03ac:079e3d0a3a9a8b@smtp.mailtrap.io:2525?encryption=tls&auth_mode=login
+MAILER_DSN=smtp://XXX:XXX@smtp.mailtrap.io:2525?encryption=tls&auth_mode=login
 `
 
 Le canal de notification *email* nécessite les dépendances suivantes:
@@ -67,7 +67,7 @@ composer require symfony/twilio-notifier
 
 ##### Configuration dans le fichier .env
 `
-TWILIO_DSN=twilio://AC065df6faec877dfab7c47052267ef25b:56dc7705c3cd281b0fda3628f3b6b1d7@default?from=+12152533638
+TWILIO_DSN=twilio://XXX:XXX@default?from=+12152533638
 `
 
 ##### Configuration du canal
@@ -94,7 +94,7 @@ composer require symfony/discord-notifier
 
 ##### Configuration dans *.env*:
 `
-DISCORD_DSN=discord://mgBXfYxKi4OBKbXzNTciFlZhtqvAROqidkMu5YWPqqOcYgtpVp2P5Rerr1PqPSIciPGc@default?webhook_id=861935742866948106
+DISCORD_DSN=discord://XXX@default?webhook_id=XXX
 `
 
 ##### Configuration du canal:
