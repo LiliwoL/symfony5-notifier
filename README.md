@@ -1,5 +1,10 @@
-# Composant Notifier
+---
+marp: false
+paginate: true
+title: Composant Notifier
+---
 
+# Composant Notifier
 
 Symfony 5 comprend également un nouveau composant **Notifier** pour créer et envoyer toutes sortes de notifications via SMS, e-mail et services de chat comme Slack et Telegram.
 
@@ -17,6 +22,7 @@ Le composant notificateur prend en charge les canaux suivants:
 ## Installation
 
 Chargement de la dépendance via composer
+
 `
 composer require symfony/notifier
 `
@@ -32,6 +38,7 @@ MAILER_DSN=smtp://XXX:XXX@smtp.mailtrap.io:2525?encryption=tls&auth_mode=login
 `
 
 Le canal de notification *email* nécessite les dépendances suivantes:
+
 `
 composer require symfony/twig-pack twig/cssinliner-extra twig/inky-extra
 `
@@ -47,6 +54,8 @@ framework:
             sender: 'sender@test.fr'
 
 ```
+
+***
 
 ### SMS
 
@@ -82,27 +91,57 @@ framework:
 
 ### Chat
 
-
 #### Avec Discord
 
 ##### Dépendance:
+
 `
 composer require symfony/discord-notifier
 `
 
 ##### Configuration dans *.env*:
+
 `
 DISCORD_DSN=discord://XXX@default?webhook_id=XXX
 `
 
 ##### Configuration du canal:
+
 ```
 # config/packages/notifier.yaml
 framework:
     notifier:
         chatter_transports:
             discord: '%env(DISCORD_DSN)%'
-        #    slack: '%env(SLACK_DSN)%'
+```
+
+***
+
+#### Avec Slack
+
+Il faudra au préalable configurer le slack!
+
+##### Dépendance:
+
+`
+composer require symfony/slack-notifier
+`
+
+##### Configuration dans *.env*:
+
+`
+SLACK_DSN=https://XXX.slack.com/archives/XXXX
+`
+
+##### Configuration du canal:
+
+```
+# config/packages/notifier.yaml
+framework:
+    notifier:
+        chatter_transports:
+            discord: '%env(DISCORD_DSN)%'
+            slack: '%env(SLACK_DSN)%'
         #    telegram: '%env(TELEGRAM_DSN)%'
 ```
 
@@ -165,7 +204,9 @@ Et enfin, procéder à l'envoi:
 		$notifier->send($notification, $recipient);
 ```
 
+***
 
+On peut également utiliser ce composant via les **events** de Symfony.
 
 
 Doc officielle:
