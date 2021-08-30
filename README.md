@@ -1,9 +1,3 @@
----
-marp: false
-paginate: true
-title: Composant Notifier
----
-
 # Composant Notifier
 
 Symfony 5 comprend également un nouveau composant **Notifier** pour créer et envoyer toutes sortes de notifications via SMS, e-mail et services de chat comme Slack et Telegram.
