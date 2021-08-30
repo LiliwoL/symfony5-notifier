@@ -166,6 +166,7 @@ Et dans une action du controller, on peut injecter la dépendance *NotifierInter
 ```
 
 Puis, créer une *Notification*:
+
 ```
 		/*
             Notification pour prévenir d'une nouvelle commande
@@ -181,10 +182,10 @@ Puis, créer une *Notification*:
             // On peut aussi ajouter des emojis
             $notification->emoji('💀');
 
-
 ```
 
 Ainsi qu'un *Recipient*:
+
 ```
 		/*
             Destinataire de la notification
@@ -197,6 +198,7 @@ Ainsi qu'un *Recipient*:
 ```
 
 Et enfin, procéder à l'envoi:
+
 ```
 	/*
 		Envoi de la notification
